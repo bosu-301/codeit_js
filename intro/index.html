@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>JavaScript Intro</title>
+  <title>Travel Website</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<script>
-function logTask(task){
-	console.log(task + ": 완료");
-	console.log("-");
-}
+  <img id="logo" src="images/logo.png" width="165" height="58">
+ 
+  <div id="menu">
+    <a id="home" onclick="clickHome();">Home</a>
+    <a id="seoul" onclick="clickSeoul();">Seoul</a>
+    <a id="tokyo" onclick="clickTokyo();">Tokyo</a>
+    <a id="paris" onclick="clickParis();">Paris</a>
+  </div>
 
-logTask("보고서 작성")
-</script>
+  <img id="photo" src="images/home.png" width="90%">
+
+  <script>
+    // 사진을 바꿔주는 함수
+    function clickreset() {
+    	document.getElementById('home').style.fontWeight = 'normal';
+    	document.getElementById('seoul').style.fontWeight = 'normal';
+    	document.getElementById('tokyo').style.fontWeight = 'normal';
+    	document.getElementById('paris').style.fontWeight = 'normal';
+    }
+
+    function clickHome() {
+		clickreset()
+		document.getElementById('photo').src = 'images/home.png';
+		document.getElementById('home').style.fontWeight = 'bold';
+    }
+
+    function clickSeoul() {
+	    clickreset()
+	    document.getElementById('photo').src = 'images/seoul.png';
+	    document.getElementById('seoul').style.fontWeight = 'bold';
+
+    }
+
+    function clickTokyo() {
+		clickreset()
+		document.getElementById('photo').src = 'images/tokyo.png';
+		document.getElementById('tokyo').style.fontWeight = 'bold';
+    }
+    
+    function clickParis() {
+		clickreset()
+		document.getElementById('photo').src = 'images/paris.png';
+		document.getElementById('paris').style.fontWeight = 'bold';
+    }
+  </script>
 </body>
 </html>
